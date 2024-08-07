@@ -1,0 +1,63 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.mba-wrapper {
+  width: 90%; /* Use a percentage-based width */
+  max-width: 1520px; /* Maximum width constraint */
+  height: auto; /* Adjust height to content */
+  aspect-ratio: 1520/587; /* Maintain aspect ratio */
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+@media (max-width: 1024px) {
+  .mba-wrapper {
+    width: 95%; /* Adjust width for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .mba-wrapper {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+.mba-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.mba-content-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Pseudo-element for background overlay */
+}
+.mba-content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(40, 101, 159, 0.75); /* Background color with transparency */
+  mix-blend-mode: multiply; /* Multiply filter */
+  z-index: -1; /* Ensure it stays behind the content */
+}
